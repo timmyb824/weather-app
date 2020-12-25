@@ -3,8 +3,9 @@ const app = express()
 const port = 3000
 const bodyParser = require('body-parser');
 const request = require('request');
+require('dotenv').config();
 
-const apiKey = '95a555064e90330d25b496f526990f33';
+const apiKey = process.env.API_KEY;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
